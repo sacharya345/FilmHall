@@ -7,11 +7,11 @@ FilmHall is a full-stack cinema booking application built with a React frontend 
 
 ```mermaid
 flowchart LR
-    User[Customer / Browser]
-    Client[React + Vite Frontend\nclient/]
-    API[Express API\nserver/src/app.js]
-    DB[(PostgreSQL Database\ndatabase/)]
-    ENV[Environment Config\nserver/.env.example]
+    User["Customer / Browser"]
+    Client["React + Vite Frontend<br/>client/"]
+    API["Express API<br/>server/src/app.js"]
+    DB[("PostgreSQL Database<br/>database/")]
+    ENV["Environment Config<br/>server/.env.example"]
 
     User --> Client
     Client -->|HTTP API calls| API
