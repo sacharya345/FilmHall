@@ -1,8 +1,9 @@
+
 import "dotenv/config";
 import app from "./app.js";
 
-const port = Number(process.env.PORT ?? 3000);
+const PORT = process.env.PORT || 3000;
 
-app.listen(port, () => {
-  console.log(`FilmHall API listening on http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`FilmHall API listening on http://localhost:${PORT}`);
 });

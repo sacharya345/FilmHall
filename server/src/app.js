@@ -1,3 +1,4 @@
+
 import cors from "cors";
 import express from "express";
 
@@ -8,10 +9,18 @@ app.use(
     origin: process.env.CLIENT_ORIGIN ?? "http://localhost:5173",
   }),
 );
+
 app.use(express.json());
 
+app.get("/", (_request, response) => {
+  response.send("Welcome to FilmHall API!");
+});
+
 app.get("/api/health", (_request, response) => {
-  response.json({ status: "ok", service: "filmhall-api" });
+  response.json({
+    status: "ok",
+    service: "filmhall-api",
+  });
 });
 
 export default app;
